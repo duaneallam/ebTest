@@ -4,7 +4,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', req: req.headers['x-forwarded-for'] });
+  res.render('index', { title: 'Express', req: req.headers['x-forwarded-for'].split(" ")[0] });
 });
 
 module.exports = router;
